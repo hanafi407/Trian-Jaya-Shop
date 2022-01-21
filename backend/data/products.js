@@ -1,0 +1,73 @@
+const products = [
+  {
+    name: "Rangka Kompor Rinai",
+    image: "/image/rangkaRinai.jpg",
+    description:
+      "Bisa Digunakan Untuk Kompor 2 Tungku Merk Rinnai Type RI 302 S, 522 S, 522 C, 522 CE, 522 E, 522 A dan Type Kompor Rinnai Dengan Ukuran Yang Sama.",
+    brand: "rinai",
+    category: "kompor",
+    price: 25000,
+    countInStock: 400,
+    rating: 4.5,
+    numReviews: 4,
+  },
+  {
+    name: "Kompor Tikus",
+    image: "/image/komporTikus.jpg",
+    description:
+      "Kompor bakar tikus panjang 55cm, panjang selang 2 m, Regulator tekanan tinggi",
+    brand: "trian",
+    category: "kompor",
+    price: 60000,
+    countInStock: 8,
+    rating: 5,
+    numReviews: 4,
+  },
+  {
+    name: "Bunner Kompor Rinai",
+    image: "/image/bunnerKompor.jpg",
+    description: "Bunner untuk kompor rinai",
+    brand: "rinai",
+    category: "kompor",
+    price: 24000,
+    countInStock: 4,
+    rating: 2.5,
+    numReviews: 4,
+  },
+  {
+    name: "Kompor semawar",
+    image: "/image/komporSemawar.jpg",
+    description:
+      "Kompor gas semawar bebagai macam ukuran mulai dari 201,202,203,768,100 cocok utk pedagang kaki lima,Nasi goreng, pecel lele,kompor peternak.. dll",
+    brand: "trian",
+    category: "kompor",
+    price: 60000,
+    countInStock: 4,
+    rating: 1,
+    numReviews: 1,
+  },
+  {
+    name: "Selang Tembaga",
+    image: "/image/selangTembaga.jpg",
+    description: "Selang kompor Tembaga panjang 1,8sangat baik kwalitasnya",
+    brand: "trian",
+    category: "kompor",
+    price: 42000,
+    countInStock: 4,
+    rating: 4,
+    numReviews: 4,
+  },
+  {
+    name: "Spuyer Kompor Gas",
+    image: "/image/spuyerKompor.jpg",
+    description:
+      "Spuyer kompor semawar bahan kuningan murni cocok untuk semua ukuran kompor semawar",
+    brand: "trian",
+    category: "kompor",
+    price: 60000,
+    countInStock: 4,
+    rating: 3.5,
+    numReviews: 4,
+  },
+];
+export default products;
