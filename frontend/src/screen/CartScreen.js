@@ -63,7 +63,7 @@ const CartScreen = () => {
                     </Col>
                     <Col md={3}>{item.name}</Col>
                     <Col md={2}>Rp{item.price}</Col>
-                    {/* <Col md={2}>
+                    <Col md={2}>
                       <Form.Control
                         as='select'
                         value={item.qty}
@@ -79,8 +79,8 @@ const CartScreen = () => {
                           </option>
                         ))}
                       </Form.Control>
-                    </Col> */}
-                    <Col md={2}>
+                    </Col>
+                    {/* <Col md={2}>
                       <Row>
                         <Col>
                           <div class='form-group'>
@@ -106,7 +106,7 @@ const CartScreen = () => {
                           </div>
                         </Col>
                       </Row>
-                    </Col>
+                    </Col> */}
                     <Col md={2}>
                       <Button
                         type='button'
