@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Form, Button, Row, Col, Stack } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
@@ -7,9 +7,7 @@ import Loader from "../components/Loader";
 import FormContainer from "./FormContainer";
 import { login } from "../actions/userAction";
 
-const LoginScreen = () => {
-  const history = useNavigate();
-
+const LoginScreen = ({ match, location, history }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -25,7 +23,7 @@ const LoginScreen = () => {
 
   useEffect(() => {
     if (userInfo) {
-      history(redirect);
+      history.push(redirect);
     }
   }, [history, userInfo, redirect]);
 
@@ -66,7 +64,7 @@ const LoginScreen = () => {
 
       <Row className='py-3'>
         <Col>
-          New Customer? 
+          New Customer?
           <Link to={redirect ? `/register?redirect=${redirect}` : "/register"}>
             Register
           </Link>

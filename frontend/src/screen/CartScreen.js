@@ -12,14 +12,9 @@ import {
 } from "react-bootstrap";
 import Message from "../components/Message";
 import { addToCart, removeFromCart } from "../actions/cartActions";
-import { useNavigate, useParams, useLocation } from "react-router-dom";
 
-const CartScreen = () => {
-  const { id } = useParams();
-
-  const navigate = useNavigate();
-
-  const location = useLocation();
+const CartScreen = ({match,location,history}) => {
+  const id = match.params.id;
 
   const qty = location.search ? Number(location.search.split("=")[1]) : 1;
 
@@ -41,7 +36,8 @@ const CartScreen = () => {
   };
 
   const checkoutHandler = () => {
-    navigate("/login?redirect=shipping");
+    
+    history.push("/login?redirect=shipping");
   };
 
   return (
@@ -80,33 +76,7 @@ const CartScreen = () => {
                         ))}
                       </Form.Control>
                     </Col>
-                    {/* <Col md={2}>
-                      <Row>
-                        <Col>
-                          <div class='form-group'>
-                            <select
-                              class='form-select'
-                              id='exampleSelect1'
-                              value={item.qty}
-                              onChange={(e) =>
-                                dispatch(
-                                  addToCart(
-                                    item.product,
-                                    Number(e.target.value)
-                                  )
-                                )
-                              }
-                            >
-                              {[...Array(item.countInStock).keys()].map((x) => (
-                                <option key={x + 1} value={x + 1}>
-                                  {x + 1}
-                                </option>
-                              ))}
-                            </select>
-                          </div>
-                        </Col>
-                      </Row>
-                    </Col> */}
+                    
                     <Col md={2}>
                       <Button
                         type='button'

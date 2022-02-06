@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import { getUserDetail,updateUserProfile } from "../actions/userAction";
 
-const ProfileScreen = () => {
-  const history = useNavigate();
-
+const ProfileScreen = ({ match, location, history }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -29,7 +27,7 @@ const ProfileScreen = () => {
 
   useEffect(() => {
     if (!userInfo) {
-      history("/login");
+      history.push("/login");
     } else {
       if (!user.name) {
         dispatch(getUserDetail("profile"));
@@ -47,7 +45,7 @@ const ProfileScreen = () => {
       setMessage("Password do not match");
     } else {
       //DISPATCH UPDATE PROFILE
-      dispatch(updateUserProfile({id:user._id,name,email,password}))
+      dispatch(updateUserProfile({ id: user._id, name, email, password }));
     }
   };
 
